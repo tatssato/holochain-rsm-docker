@@ -5,7 +5,7 @@ RUN rustup target add wasm32-unknown-unknown
 RUN mkdir /holochain
 
 WORKDIR /holochain
-ARG DOCKER_BRANCH=60292dc6aa8413866da6f44d8af11c7bd600608a
+ARG DOCKER_BRANCH=develop
 
 ADD https://github.com/holochain/holochain/archive/$DOCKER_BRANCH.tar.gz /holochain/$DOCKER_BRANCH.tar.gz
 RUN tar --strip-components=1 -zxvf $DOCKER_BRANCH.tar.gz
